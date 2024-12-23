@@ -1,3 +1,1 @@
-# in
-
-# https://mmgahirori.github.io/in/
+# .com

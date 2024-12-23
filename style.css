@@ -1,0 +1,372 @@
+@import url(https://fonts.googleapis.com/css2?family=Schoolbell&display=swap);
+header .top .phone,
+header .top .social-media li,
+header .top .whatsapp {
+  list-style-type: none;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+footer,
+header .top {
+  background-color: #161616;
+}
+body,
+h1,
+p {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header .top {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .top .phone,
+header .top .whatsapp {
+  color: #333;
+  text-decoration: none;
+  height: 35px;
+}
+header .top .social-media li {
+  display: block;
+  height: 40px;
+}
+header .top .social-media a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 10px;
+}
+#menu {
+  background: #000;
+  height: 49px;
+  padding-right: 18px;
+}
+#menu .logo img {
+  max-width: 50%;
+  height: 50px;
+  display: inline-block;
+  border-radius: 50%;
+}
+#menu li,
+#menu ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+#menu ul {
+  width: 100%;
+  text-align: right;
+}
+#menu li {
+  display: inline-block;
+  position: relative;
+}
+#menu a,
+#menu li:hover ul.sub-menus {
+  display: block;
+}
+#menu a {
+  line-height: 49px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+#menu input,
+#menu label,
+.mySlides {
+  display: none;
+}
+#menu a.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 5px;
+}
+#menu li a:hover {
+  color: #09c;
+  background: #f2f2f2;
+}
+#menu input {
+  margin: 0;
+  padding: 0;
+  height: 49px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+#menu label {
+  line-height: 49px;
+  text-align: center;
+  position: absolute;
+  left: 35px;
+}
+#menu label:before {
+  font-size: 1.6em;
+  color: #fff;
+  content: "\2261";
+  margin-left: 20px;
+}
+#menu ul.sub-menus {
+  height: auto;
+  overflow: hidden;
+  width: 170px;
+  background: #444;
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+#menu ul.sub-menus li {
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+#menu ul.sub-menus a {
+  color: #fff;
+  font-size: 16px;
+}
+#menu ul.sub-menus a:hover {
+  background: #f2f2f2;
+  color: #444;
+}
+.logo {
+  max-width: 100%;
+  height: 80px;
+  float: left;
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.title,
+footer {
+  padding: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  #menu {
+    position: relative;
+  }
+  #menu ul {
+    background: #444;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    height: auto;
+    display: none;
+    text-align: left;
+  }
+  #menu input:checked ~ ul,
+  #menu li {
+    display: block;
+  }
+  #menu ul.sub-menus {
+    width: 100%;
+    position: static;
+  }
+  #menu ul.sub-menus a {
+    padding-left: 30px;
+  }
+  #menu li {
+    float: none;
+    width: auto;
+  }
+  #menu input,
+  #menu label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+  #menu input {
+    z-index: 4;
+  }
+  #menu input:checked + label {
+    color: #fff;
+  }
+  #menu input:checked + label:before {
+    content: "\00d7";
+  }
+}
+.title {
+  border: 2px solid #000;
+  border-radius: 26px;
+  width: 70%;
+  height: 80%;
+  margin: 10px auto;
+  background-color: #f7910c9f;
+}
+.title h2 {
+  font-size: 60px;
+  color: #f10808;
+}
+.next,
+.prev,
+.title p {
+  font-weight: 700;
+  font-size: 20px;
+}
+.title p {
+  color: #555;
+}
+.slideshow-container {
+  border: 2px solid rgba(161, 64, 8, 0.836);
+  border-radius: 10px;
+  max-width: 80%;
+  position: relative;
+  margin: 5px auto;
+  overflow: hidden;
+}
+.next,
+.numbertext,
+.prev,
+.text {
+  position: absolute;
+}
+.slideshow-container img {
+  padding: 8px;
+  width: 100%;
+  height: 30%;
+  object-fit: cover;
+  aspect-ratio: 5/2;
+}
+.next,
+.prev {
+  cursor: pointer;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #fff;
+  transition: 0.6s;
+  border-radius: 0 3px 3px 0;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.text {
+  color: #000;
+  font-size: 15px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  filter: drop-shadow(10px 6px 16px #ee0000);
+}
+.heading h1,
+.leading-relaxed {
+  font-weight: 700;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  top: 0;
+}
+@media screen and (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar ul {
+    display: none;
+  }
+  .navbar.active ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .hamburger {
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  .hamburger:hover {
+    color: red;
+  }
+  .img img,
+  .img2 img,
+  .title {
+    width: 90%;
+  }
+  .slideshow-container {
+    max-width: 100%;
+  }
+  .slideshow-container img {
+    height: auto;
+  }
+  .social-media li {
+    color: #f1f1f1;
+    background-color: #000;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  #mmg {
+    height: 100%;
+  }
+}
+#mmg {
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 5px 3px 17px 0 #000;
+}
+#mmg:hover {
+  transform: scale(1.1);
+}
+.leading-relaxed strong {
+  font-weight: 700;
+  color: #e00;
+}
+.text-black-900,
+.text-gray-900 {
+  text-align: center;
+  font-weight: 800;
+  text-shadow: 1px 1px 2px red, 0 0 1em #f0a505, 0 0 0.2em #ff7300;
+}
+.donetion {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  width: 80%;
+}
+.heading {
+  display: block;
+  font-size: 34px;
+  line-height: 1.5;
+  margin-block-end: 1em;
+  align-items: center;
+  text-align: center;
+}
+.heading h1 {
+  font-family: Schoolbell, cursive;
+  font-style: normal;
+  font-size: 700;
+  animation: alternate-reverse;
+  text-shadow: 5px 5px 10px #000;
+}
+.dn-img {
+  align-items: center;
+}
+.img-daan {
+  margin: auto;
+  height: 25vw;
+  max-width: 15rem;
+}
+footer {
+  color: #f1f1f1;
+}
